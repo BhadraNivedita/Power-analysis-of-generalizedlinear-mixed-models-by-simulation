@@ -1,7 +1,7 @@
 # Power analysis of generalized linear mixed-models by simulation
 
 #simr: Power Analysis for Generalised Linear Mixed Models by Simulation
-#https://cran.r-project.org/web/packages/simr/index.html
+
 
 ```library(simr)
 model1 <- glmer(z ~ x + (1|g), family="poisson", data=simdata)
@@ -31,8 +31,13 @@ plot(pc2)
 
 ##Varying the number and size of groups
 ##Adding More Groups
+
 ```
 model3 <- extend(model1, along="g", n=15)
 pc3 <- powerCurve(model3, along="g")
 plot(pc3)
 ```
+
+
+Reference webpage: https://cran.r-project.org/web/packages/simr/index.html
+
